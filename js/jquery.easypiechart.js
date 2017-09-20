@@ -206,7 +206,7 @@ var EasyPieChart = function(el, opts) {
         size: 154,
         rotate: 0,
         animate: {
-            duration: 1000,
+            duration: 15000,
             enabled: true
         },
         easing: function (x, t, b, c, d) {
