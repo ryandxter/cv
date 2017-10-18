@@ -107,9 +107,8 @@
 
     .box {
         border: none;
-        width: 90vw;
-        margin-left: 5vw;
-        float: none;
+        width: 100%;
+        margin-left: 0px;
         overflow-y: auto;
     }
 
