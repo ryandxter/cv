@@ -97,7 +97,7 @@ $(function(){
     progressBar(95, $('#progressBar'));
     progressBar(68, $('#progressBar2'));
     progressBar(80, $('#progressBar3'));
-	progressBar(90, $('#progressBar4'));
+    progressBar(90, $('#progressBar4'));
     progressBar(78, $('#progressBar5'));
 
     // Responsive Menu
@@ -127,7 +127,7 @@ $(function(){
 });
 
 /*
-	LODING BAR
+	LOADING BAR & DYNAMIC NAME
 ================================ */
 
 jQuery(window).on('load', function(){
@@ -144,4 +144,26 @@ jQuery(window).on('load', function(){
 			rowHeight: 100
 		}
 	});
+});
+
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() < $('#chapterabout').offset().top) { 
+            //change yes to no
+            $('#name').html('Riansyah Rizky Poetra');
+        } else if ($(window).scrollTop() < $('#chaptereducation').offset().top) {
+            $('#name').html('About');
+		} else if ($(window).scrollTop() < $('#chapterexperience').offset().top) {
+            $('#name').html('Education');
+		} else if ($(window).scrollTop() < $('#chapterskills').offset().top) {
+            $('#name').html('Experience');
+		} else if ($(window).scrollTop() < $('#chapterportfolio').offset().top) {
+            $('#name').html('Skills');
+		} else if ($(window).scrollTop() < $('#chaptercontact').offset().top) {
+            $('#name').html('Portfolio');
+		} else {
+            $('#name').html('Contact');
+        }
+    });
 });
